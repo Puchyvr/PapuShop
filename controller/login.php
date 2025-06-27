@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 'rol' => $login['nombreRol']
             ];
 
-            //Comprobar los roles del usuario (Administrador o Usuario :v)
+            //Comprobar los roles del usuario (Administrador o Usuario)
             if($login['nombreRol'] === 'Administrador'){
                 header("Location: ../view/dashboard.php");
             }else{

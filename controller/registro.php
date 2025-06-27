@@ -23,10 +23,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $query = $pdo->prepare("SELECT id FROM usuarios WHERE nombreUsuario = ?");
     $query->execute([$usuario]);
 
-    //Agregar el nuevo usuario
     if($query->fetch()){
         die("Este nombre de usuario ya esta en uso, utiliza otro");
     }
+
+    //Agregar el nuevo usuario
 
     $query = $pdo->prepare("INSERT INTO usuarios (nombreUsuario, password, idRol) VALUES (?, ?, ?)");
     $query->execute([$usuario, $hash, $idRol]);
