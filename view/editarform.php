@@ -24,16 +24,17 @@ $marcas = $pdo->query("SELECT id, nombreMarca FROM marcas")->fetchAll();
 ?>
 
 <form action="../controller/crud/editar.php" method="POST">
+    <input type="hidden" name="id" value="<?= $seleccionar['id']; ?>">
     <label>Nombre</label>
     <input type="text" name="producto" value="<?= $seleccionar['nombreProducto']; ?>">
     <label>Descripción</label>
-    <input type="text" name="descripcion" value="<?= $seleccionar['decripcionProducto']; ?>">
+    <input type="text" name="descripcion" value="<?= $seleccionar['descripcionProducto']; ?>">
     <label>Talle</label>
     <input type="text" name="talle" value="<?= $seleccionar['talle']; ?>">
     <label>Color</label>
     <input type="text" name="color" value="<?= $seleccionar['color']; ?>">
     <label>Imagen</label>
-    <input type="file" name="imagen" value="<?= $seleccionar['imagen']; ?>">
+    <input type="hidden" name="imagenActual" value="<?= $seleccionar['imagen']; ?>">
     <label>Precio</label>
     <input type="number" name="precio" value="<?= $seleccionar['precio']; ?>">
     <label>Categoria</label>
