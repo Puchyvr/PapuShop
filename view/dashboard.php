@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Dashboard</h1>
+    <a href="registrarform.php">Formulario de registro</a>
 </body>
 </html>
