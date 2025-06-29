@@ -37,8 +37,8 @@ $productos = $query->fetchAll();
             <tr>
                 <th><?= $selecconar['nombreProducto']; ?></th>
                 <th><?= $selecconar['precio']; ?></th>
-                <th><a href=""><i class="bi bi-pencil"></i></a></th>
-                <th><a href=""><i class="bi bi-trash3-fill"></i></a></th>
+                <th><a href="editarform.php?idR=<?= $selecconar['id']; ?>"><i class="bi bi-pencil"></i></a></th>
+                <th><a href="../controller/crud/eliminar.php?idR=<?= $selecconar['id']; ?>"><i class="bi bi-trash3-fill"></i></a></th>
             </tr>
             <?php } ?>
         </tbody>
